@@ -83,7 +83,7 @@ load_source_data <- function(filename,source_factors=NULL,conc_dep,data_type,mix
   if(source.fac==0) by_factor <- NA else by_factor <- match(source_factors, mix$factors)
 
   # turn source names into numbers
-  src <- as.factor(SOURCE[,1])
+  src <- as.factor(unlist(SOURCE[,1]))
   source_names <- levels(src)   # first save the source names in source_names
   n.sources <- length(source_names)    # n.sources is the number of sources, which is the length of the source names vector
   levels(src) <- 1:n.sources    # convert the source names in SOURCE into numbers
