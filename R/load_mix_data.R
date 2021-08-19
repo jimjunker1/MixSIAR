@@ -3,7 +3,7 @@
 #' \code{load_mix_data} loads the mixture data file and names the biotracers and
 #' any Fixed, Random, or Continuous Effects.
 #'
-#' @param filename csv file with the mixture/consumer data
+#' @param filename csv file or R data.frame object with the mixture/consumer data
 #' @param iso_names vector of isotope column headings in 'filename'
 #' @param factors vector of random/fixed effect column headings in 'filename'.
 #'          NULL if no factors.
@@ -71,7 +71,7 @@
 #' select 1 or 0.
 #' @export
 load_mix_data <- function(filename,iso_names,factors,fac_random,fac_nested,cont_effects){
-  X <- read.csv(filename)         # raw consumer data
+  if(grepl(".*.csv", filename)) X <- read.csv(filename) else X <- filename        # raw consumer data
   n.iso <- length(iso_names)      # number of isotopes
   # if n.iso = 0, error
   if(n.iso == 0){
