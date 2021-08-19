@@ -7,7 +7,7 @@
 load_source_data(filename, source_factors = NULL, conc_dep, data_type, mix)
 }
 \arguments{
-\item{filename}{character, csv file with the source data.}
+\item{filename}{character or name, csv file or R data.frame object with the source data.}
 
 \item{source_factors}{character, column heading in 'filename' that matches
 a Fixed or Random Effect from the mixture data (\code{mix$factors}).

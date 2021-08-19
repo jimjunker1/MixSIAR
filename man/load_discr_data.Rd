@@ -7,7 +7,7 @@
 load_discr_data(filename, mix)
 }
 \arguments{
-\item{filename}{csv file with the discrimination data}
+\item{filename}{csv file or R data.frame object with the discrimination data}
 
 \item{mix}{output from \code{\link{load_mix_data}}}
 }

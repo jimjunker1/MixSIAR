@@ -14,7 +14,7 @@ load_mix_data(
 )
 }
 \arguments{
-\item{filename}{csv file with the mixture/consumer data}
+\item{filename}{csv file or R data.frame object with the mixture/consumer data}
 
 \item{iso_names}{vector of isotope column headings in 'filename'}
 

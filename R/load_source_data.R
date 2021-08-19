@@ -58,7 +58,7 @@
 #' @export
 #'
 load_source_data <- function(filename,source_factors=NULL,conc_dep,data_type,mix){
-  if(grepl(".*.csv", filname)) SOURCE <- read.csv(filename) else SOURCE <- filename
+  if(grepl(".*.csv", filename)) SOURCE <- read.csv(filename) else SOURCE <- filename
   source.fac <- length(source_factors)
   if(source.fac > 1){
     stop(paste("More than one source factor.
